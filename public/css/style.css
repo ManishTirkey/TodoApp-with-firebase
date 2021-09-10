@@ -19,6 +19,8 @@ body {
 }
 .today {
   text-align: center;
+  color: rgba(226, 226, 226, 0.39);
+  letter-spacing: 1px;
 }
 .todo {
   margin-top: 100px;

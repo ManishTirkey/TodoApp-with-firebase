@@ -1,7 +1,6 @@
 // jshint esversion: 6
 const express = require("express");
 const bodyparser = require("body-parser");
-const path = require("path");
 const { DATE } = require(__dirname + "/date.js");
 const mongoose = require("mongoose");
 
@@ -18,7 +17,6 @@ const ListsModel = new mongoose.model("Lists", TodoListSchema);
 const today = DATE();
 
 const app = express();
-const port = 3000;
 
 //--------------------ejs
 
@@ -77,6 +75,10 @@ app.post("/delete", (req, res) => {
 });
 
 // ---------------------listining
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 app
   .listen(port, (error) => {
     if (error) throw error;
