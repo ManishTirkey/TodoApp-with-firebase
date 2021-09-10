@@ -1,0 +1,47 @@
+<%- include('header') -%>
+
+
+    <div class="container">
+        <h1 class="today">
+            <%=date%>
+        </h1>
+        <div class="todo">
+
+            <div class="todo-list">
+                <ul>
+                    <%items.map((item, index)=>{%>
+                        <li>
+                            <div>
+                                <form action="/delete" method="post">
+                                    <input type="hidden" name="item" value="<%=item._id%>">
+                                    <button type="submit" class="del">
+                                        <i class="fas fa-trash-alt delete" onclick=del("<%=item._id%>")></i>
+                                    </button>
+                                </form>
+
+                            </div>
+                            <span id="item<%=item._id%>">
+                                <%=item.name%>
+                            </span>
+
+                        </li>
+                        <%})%>
+                </ul>
+            </div>
+            <div class="todo-form">
+                <h2>Add Todo in List</h2>
+                <form action="/" method='post'>
+                    <div>
+                        <input type="text" name="element" id="element" autocomplete="off" placeholder="Add Item">
+                    </div>
+
+
+                    <button type="submit" name="btn" class="btn" value=<%=date%>>Add in List</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('footer') -%>

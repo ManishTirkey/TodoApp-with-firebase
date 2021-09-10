@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #273746 50%, #2e86c1 50%);
+}
+
+.container {
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+}
+.today {
+  text-align: center;
+}
+.todo {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo-list {
+  padding: 15px;
+  color: rgba(224, 224, 224, 0.822);
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  margin-left: 20px;
+  width: 30%;
+}
+.todo-list li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.todo-list .delete {
+  margin-right: 10px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  font-size: 14px;
+  background: #f4d03f;
+  color: #282c34;
+  cursor: pointer;
+}
+.todo-list .delete:hover {
+  background: rgb(211, 211, 211);
+  color: #e74c3c;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.todo-form {
+  text-align: center;
+  width: 60%;
+}
+.todo-form h2 {
+  color: #1a1a1ac4;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+.todo-form input:focus {
+  outline: none;
+  border: none;
+  background: #282c34;
+}
+.todo-form input {
+  border: none;
+  padding: 7px 0 7px 10px;
+  width: 80%;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  box-shadow: 5px 7px 11px 5px #282c34;
+}
+
+.todo-form .btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background: #55555579;
+  margin-top: 25px;
+  box-shadow: 5px 7px 11px 5px #282c34;
+}
+
+.del {
+  border: none;
+  outline: none;
+  background: transparent;
+}
